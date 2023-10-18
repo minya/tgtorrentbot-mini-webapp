@@ -1,0 +1,25 @@
+.main-page__title {
+  font-family: monospace;
+  margin: 20px auto;
+  max-width: 800px;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+
+.main-page__torrents-list {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+  font-size: 14px;
+  margin: 20px auto;
+  max-width: 800px;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+.main-page__torrents-list>div{
+  margin-bottom: 5px;
+}

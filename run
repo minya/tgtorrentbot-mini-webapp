@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CNT_NAME="tgt-mwa"
+IMG_NAME="tgtorrentbot-mini-webapp-img"
+
+docker rm -f $CNT_NAME
+
+docker run -d --name $CNT_NAME \
+    -p 4443:443 \
+    --env-file ~/.envs/$CNT_NAME.env \
+        $IMG_NAME

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+APP_NAME="tgtorrentbot-mini-webapp"
+IMG_NAME="$APP_NAME-img"
+
+# Move node_modules to temporary location
+if [ -d "$APP_NAME/node_modules" ]; then
+  mv $APP_NAME/node_modules /tmp/node_modules_backup
+fi
+
+docker build -t $IMG_NAME .
+
+# Restore node_modules from temporary location
+if [ -d "/tmp/node_modules_backup" ]; then
+  mv /tmp/node_modules_backup $APP_NAME/node_modules
+fi

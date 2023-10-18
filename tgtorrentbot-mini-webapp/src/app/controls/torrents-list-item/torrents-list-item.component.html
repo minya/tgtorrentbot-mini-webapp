@@ -1,0 +1,16 @@
+<div class="torrents-list-item">
+  <div class="torrents-list-item__main-line">
+    {{ torrent.name }}
+  </div>
+  <div class="torrents-list-item__details-line">
+    <div class="torrents-list-item__details-size">
+      {{ torrent.sizeBytes | bytesToHumanReadable }}
+    </div>
+    <div class="torrents-list-item__details-seeders">
+      {{ torrent.seeders }}
+    </div>
+    <div class="torrents-list-item__details-leechers">
+      {{ torrent.leechers }}
+    </div>
+  </div>
+</div>

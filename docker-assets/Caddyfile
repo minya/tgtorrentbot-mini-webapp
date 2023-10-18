@@ -1,0 +1,7 @@
+{env.SITE_NAME} {
+  tls {
+    dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+  }
+  root * /www
+  file_server
+}
